@@ -21,14 +21,14 @@
   
     <meta name="description" content="看到B站一个视频，看不懂视频在这里：什么是 KVM。之前也刷到过类似的文章，但一直是”完全不懂、不了解”的状态 —— 知道 KVM 这个词，不知道它到底干了什么。 同时还有件事一直没弄明白：我在用 wsl2，文档里说它的性能接近原生，理由是”不是虚拟的，是真的 linux 内核跑在物理 CPU 上“。这句话我当时是信的，但完全说不清为什么 —— 虚拟和不虚拟，到底差在哪？ 正好这段时间在看linu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从 ioctl 到 VM Exit：我把 KVM 虚拟化从头问了一遍">
+<meta property="og:title" content="初识虚拟机技术KVM">
 <meta property="og:url" content="https://xhd-xhd.github.io/2026/11/07/kvm-virtualization-notes/index.html">
 <meta property="og:site_name" content="xhd blog">
 <meta property="og:description" content="看到B站一个视频，看不懂视频在这里：什么是 KVM。之前也刷到过类似的文章，但一直是”完全不懂、不了解”的状态 —— 知道 KVM 这个词，不知道它到底干了什么。 同时还有件事一直没弄明白：我在用 wsl2，文档里说它的性能接近原生，理由是”不是虚拟的，是真的 linux 内核跑在物理 CPU 上“。这句话我当时是信的，但完全说不清为什么 —— 虚拟和不虚拟，到底差在哪？ 正好这段时间在看linu">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xhd-xhd.github.io/img/else/KVM1.png">
 <meta property="article:published_time" content="2026-11-07T11:30:00.000Z">
-<meta property="article:modified_time" content="2026-11-07T12:38:23.824Z">
+<meta property="article:modified_time" content="2026-11-07T12:58:00.682Z">
 <meta property="article:author" content="xhd">
 <meta property="article:tag" content="KVM">
 <meta property="article:tag" content="Linux">
@@ -41,7 +41,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>从 ioctl 到 VM Exit：我把 KVM 虚拟化从头问了一遍 - xhd blog</title>
+  <title>初识虚拟机技术KVM - xhd blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="从 ioctl 到 VM Exit：我把 KVM 虚拟化从头问了一遍"></span>
+            <span id="subtitle" data-typed-text="初识虚拟机技术KVM"></span>
           
         </div>
 
@@ -292,7 +292,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">从 ioctl 到 VM Exit：我把 KVM 虚拟化从头问了一遍</h1>
+            <h1 id="seo-header">初识虚拟机技术KVM</h1>
             
             
               <div class="markdown-body">
@@ -512,7 +512,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>从 ioctl 到 VM Exit：我把 KVM 虚拟化从头问了一遍</div>
+      <div>初识虚拟机技术KVM</div>
       <div>https://xhd-xhd.github.io/2026/11/07/kvm-virtualization-notes/</div>
     </div>
     <div class="license-meta">
